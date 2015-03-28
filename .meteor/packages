@@ -8,4 +8,5 @@ meteor-platform
 autopublish
 insecure
 iron:router
+fastclick
 jamielob:transitions
