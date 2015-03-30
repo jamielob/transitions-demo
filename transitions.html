@@ -20,13 +20,13 @@
 </head>
 
 <template name="layout">
-	<div id="layout">
+	<div id="transitions-container">
 		{{>yield}}
 	</div>
 </template>
 
 <template name="page1">
-	<div class="content page-1">
+	<div class="transitions-content	page-1">
 	  <h1>Demos</h1>
 	  <p>Here are some of the possible transitions.  All transitions are available in multiple directions and can be combined with each other.</p>
 	  <p>
@@ -40,17 +40,17 @@
 		  <a href="{{pathFor 'page2'}}" data-transition-out="foldDownOut" data-transition-in="foldDownIn delay300">Fold</a>
 		  <a href="{{pathFor 'page2'}}" data-transition-out="hingeLeftOut" data-transition-in="hingeRightIn delay300">Hinge</a>
 		  <a href="{{pathFor 'page2'}}" data-transition-out="roomUpOut" data-transition-in="roomUpIn">Room</a>
-		  <a href="{{pathFor 'page2'}}" data-transition-out="cubeUpOut" data-transition-in="cubeUpIn onTop">Cube</a>
-		  <a href="{{pathFor 'page2'}}" data-transition-out="carouselLeftOut" data-transition-in="carouselLeftIn">Carousel</a>
+		  <a href="{{pathFor 'page2'}}" data-transition-out="cubeUpOut" data-transition-in="cubeUpIn delay1 onTop">Cube</a>
 		  <a href="{{pathFor 'page2'}}" data-transition-out="swingLeftOut" data-transition-in="swingRightIn delay200">Swing</a>
-		  <a href="{{pathFor 'page2'}}" data-transition-out="sweepLeftOut" data-transition-in="sweepLeftIn delay200">Sweep</a>
+		  <a href="{{pathFor 'page2'}}" data-transition-out="sweepLeftOut" data-transition-in="sweepLeftIn delay100">Sweep</a>
+
 	  </p>
 	  <p><a href="https://github.com/jamielob/transitions-demo">GITHUB DEMO SOURCE</a></p>
   </div>
 </template>
 
 <template name="page2">
-	<div class="content page-2">
+	<div class="transitions-content page-2">
 	  <a href="{{pathFor 'page1'}}" data-transition-out="slideDownOut" data-transition-in="slideDownIn" class="back">Back to demos</a>
   </div>
 </template>
