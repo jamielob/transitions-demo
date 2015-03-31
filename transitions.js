@@ -7,5 +7,6 @@ if (Meteor.isClient) {
   //Transitions.container = '#custom-container';
   //Transitions.content = '.custom-content';
 
+
 }
 
