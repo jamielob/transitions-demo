@@ -1,33 +1,16 @@
 <head>
-	<!-- CONFIGURATION -->
- 
-    <!-- Allow web app to be run in full-screen mode. -->
-    <meta name="apple-mobile-web-app-capable"
-          content="yes">
- 
-    <!-- Make the app title different than the page title. -->
-    <meta name="apple-mobile-web-app-title"
-          content="Transitions">
- 
-    <!-- Configure the status bar. -->
-    <meta name="apple-mobile-web-app-status-bar-style"
-          content="black">
- 
-    <!-- Set the viewport. -->
-    <meta name="viewport"
-          content="initial-scale=1">
- 
+    <meta name="viewport" content="initial-scale=1">
 </head>
 
 <template name="layout">
-	<div id="transitions-container">
-		{{>yield}}
+	<div class="transitions-container" style="height:100%;">
+		{{> yield}}
 	</div>
 </template>
 
 <template name="page1">
-	<div class="transitions-content	page-1">
-	  <h1>Demos</h1>
+	<div class="transitions-content page-1">
+	  <h1>Transition Demos</h1>
 	  <p>Here are some of the possible transitions.  All transitions are available in multiple directions and can be combined with each other.</p>
 	  <p>
 		  <a href="{{pathFor 'page2'}}" data-transition-out="slideRightOut" data-transition-in="slideRightIn">Slide</a>
@@ -43,14 +26,38 @@
 		  <a href="{{pathFor 'page2'}}" data-transition-out="cubeUpOut" data-transition-in="cubeUpIn delay1 onTop">Cube</a>
 		  <a href="{{pathFor 'page2'}}" data-transition-out="swingLeftOut" data-transition-in="swingRightIn delay200">Swing</a>
 		  <a href="{{pathFor 'page2'}}" data-transition-out="sweepLeftOut" data-transition-in="sweepLeftIn delay100">Sweep</a>
-
 	  </p>
+
 	  <p><a href="https://github.com/jamielob/transitions-demo">GITHUB DEMO SOURCE</a></p>
   </div>
 </template>
 
 <template name="page2">
 	<div class="transitions-content page-2">
-	  <a href="{{pathFor 'page1'}}" data-transition-out="slideDownOut" data-transition-in="slideDownIn" class="back">Back to demos</a>
+		
+		<h1>Second Page</h1>
+
+		<a href="{{pathFor 'page1'}}" data-transition-out="slideDownOut" data-transition-in="slideDownIn">Back to demos</a>
+		<a href="#" class="toggleTest" data-transition-out="sweepLeftOut" data-transition-in="sweepLeftIn delay100">Toggle Inline Transition</a>	
+
+		<div class="transitions-container">
+			{{> UI.dynamic template=dynamicTemplate}}	
+		</div>
+
+		<p>More static content!</p>
   </div>
 </template>
+
+
+<template name="test1">
+	<div class="transitions-content">
+		<h2>Inline transitions!</h2>
+	</div>
+</template>
+
+<template name="test2">
+	<div class="transitions-content">
+		<h2>Weeeeeeeeee!</h2>
+	</div>
+</template>
+
